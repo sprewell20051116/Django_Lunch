@@ -13,17 +13,21 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'wvp9bbglf7(#8wsbrm*im6$u*sr#%xf^oa!n7f5n_ff$3328at'
+# Casper_Note : Move to local.py
+# SECRET_KEY = 'wvp9bbglf7(#8wsbrm*im6$u*sr#%xf^oa!n7f5n_ff$3328at'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Casper_Note : Move to local.py
+# DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -72,14 +76,14 @@ WSGI_APPLICATION = 'lunch.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
+''' # Casper_Note : Move to local.py
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
