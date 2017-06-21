@@ -4,9 +4,11 @@ from django.http import Http404
 
 
 # Create your views here.
+'''
+# Move to pages/views.py
 def home(request):
     return render(request, 'home.html')
-
+'''
 def store_list(request):
     stores = Store.objects.all()
     return render(request, 'store_list.html', {'stores': stores})

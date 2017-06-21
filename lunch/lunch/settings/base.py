@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'pages', # Home page
     'stores',
     'django.contrib.admin', # 這一行啟用 Django admin
     'django.contrib.auth',
