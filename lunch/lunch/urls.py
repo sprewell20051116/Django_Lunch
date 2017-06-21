@@ -15,12 +15,22 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from stores.views import home
+from stores.views import home, store_list, store_detail
+
 
 urlpatterns = [
     url(r'^$', home, name='home'),
     
-    # 這一行把 admin/ 下面的 URL 對應到 Django admin。
+    # local : http://localhost:8000/store/
+    url(r'^store/$', store_list, name='store_list'), 
+
+    # store detail, pk = primary key, which would pass to view function store_detail() in stores/views.py
+    url(r'^store/(?P<pk>\d+)/$', store_detail, name='store_detail'),
+
+
+    # local : http://localhost:8000/admin/
+    # 這一行把 admin/ 下面的 URL 對應到 Django admin
     url(r'^admin/', include(admin.site.urls)),
+
 ]
 
