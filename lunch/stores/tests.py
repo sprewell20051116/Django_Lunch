@@ -1,6 +1,6 @@
 from django.test import TestCase
 from .models import Store, MenuItem
-
+from .views import store_create
 '''
 # Move to pages/views.py
 # Create your tests here.

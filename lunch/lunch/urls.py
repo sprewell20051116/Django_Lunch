@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-#from stores.views import store_list, store_detail
+# from stores.views import store_list, store_detail
 from pages.views import home
+
+
 
 urlpatterns = [
 
@@ -28,6 +30,8 @@ urlpatterns = [
     
     url(r'^$', home, name='home'),
     url(r'^store/', include('stores.urls')),
+
+
     # local : http://localhost:8000/admin/
     # 這一行把 admin/ 下面的 URL 對應到 Django admin
     url(r'^admin/', include(admin.site.urls)),
