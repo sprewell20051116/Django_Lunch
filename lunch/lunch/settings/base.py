@@ -35,8 +35,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'pages', # Home page
-    'stores',
+    'pages',  # Home page
+    'stores', # store app
+    'base',   # above two are the based on "base"
     'django.contrib.admin', # 這一行啟用 Django admin
     'django.contrib.auth',
     'django.contrib.contenttypes',
