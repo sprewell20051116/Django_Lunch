@@ -17,8 +17,7 @@
 <div class="container">
   {% for store in stores %}
   <div class="store">
-  <!-- 這裡傳入的參數會被用在 URL 的 capturing group 上，所以這樣就可以得到某個 store 的 URL -->
-  <h2><a href="{% url 'store_detail' pk=store.pk %}">{{ store.name }}</a></h2> 
+  <h2><a href="{{ store.get_absolute_url }}">{{ store.name }}</a></h2>
   <p>{{ store.notes }}</p>
   </div>
   {% endfor %}

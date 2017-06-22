@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 
 # Create your models here.
 class Store(models.Model):
@@ -9,6 +10,8 @@ class Store(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('store_detail', kwargs={'pk': self.pk})
 
 class MenuItem(models.Model):
 
