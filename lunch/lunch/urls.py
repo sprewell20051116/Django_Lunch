@@ -31,7 +31,6 @@ urlpatterns = [
     url(r'^$', home, name='home'),
     url(r'^store/', include('stores.urls')),
 
-
     # local : http://localhost:8000/admin/
     # 這一行把 admin/ 下面的 URL 對應到 Django admin
     url(r'^admin/', include(admin.site.urls)),
